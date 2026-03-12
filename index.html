@@ -7,7 +7,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,18 +23,21 @@
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
-                        title: ['Integral CF', 'Integral', 'Anton', 'sans-serif'],
+                        title: ['Milkers', 'Montserrat', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
     <style>
-        /* Configuração para a Fonte Integral e o seu Fallback */
+        /* Configuração para a Fonte Milkers e o seu Fallback (Montserrat) */
         @font-face {
-            font-family: 'Integral CF';
-            src: local('Integral CF'), local('Integral');
-            font-weight: bold;
+            font-family: 'Milkers';
+            src: url('fontes/Milkers.otf') format('opentype'), 
+                 url('fontes/Milkers.ttf') format('truetype'),
+                 local('Milkers');
+            font-weight: normal;
+            font-display: swap;
         }
 
         body {
@@ -45,9 +48,10 @@
         }
 
         .font-title {
-            font-family: 'Integral CF', 'Integral', 'Anton', sans-serif;
+            font-family: 'Milkers', 'Montserrat', sans-serif;
+            font-weight: 900; /* Mantém o peso grosso caso a Milkers falhe e use a Montserrat */
             text-transform: uppercase;
-            letter-spacing: 0.02em;
+            letter-spacing: 0.02em; /* Espaçamento ajustado para fontes display como a Milkers */
         }
 
         .animate-spin-slow {
@@ -119,7 +123,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ea5b0c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
                 Narrativa & Estratégia de Conteúdo
             </div>
-            <h1 class="text-5xl md:text-8xl font-bold mb-8 leading-[1.05] font-title reveal-on-scroll delay-200">
+            <h1 class="text-4xl md:text-7xl font-bold mb-8 leading-[1.05] font-title reveal-on-scroll delay-200">
                 Vídeos que capturam atenção e <br> <span class="text-[#ea5b0c]">constroem posicionamento.</span>
             </h1>
             <p class="text-lg md:text-xl text-zinc-400 mb-12 max-w-2xl mx-auto leading-relaxed font-medium reveal-on-scroll delay-300">
@@ -142,20 +146,20 @@
     <section class="border-y border-zinc-800 bg-zinc-900/10">
         <div class="max-w-7xl mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-10">
             <div class="text-center reveal-on-scroll delay-100">
-                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9]"><span class="counter" data-target="100">0</span>+</div>
-                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto">Vídeos produzidos para clientes</div>
+                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9] font-title"><span class="counter" data-target="100">0</span>+</div>
+                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto mt-2">Vídeos produzidos para clientes</div>
             </div>
             <div class="text-center reveal-on-scroll delay-200">
-                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9]"><span class="counter" data-target="300">0</span>k+</div>
-                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto">Visualizações acumuladas em conteúdos</div>
+                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9] font-title"><span class="counter" data-target="300">0</span>k+</div>
+                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto mt-2">Visualizações acumuladas em conteúdos</div>
             </div>
             <div class="text-center reveal-on-scroll delay-300">
-                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9]"><span class="counter" data-target="100">0</span>k+</div>
-                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto">Visitas em perfil geradas em campanhas</div>
+                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9] font-title"><span class="counter" data-target="100">0</span>k+</div>
+                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto mt-2">Visitas em perfil geradas em campanhas</div>
             </div>
             <div class="text-center reveal-on-scroll delay-[400ms]">
-                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9]"><span class="counter" data-target="5">0</span>/5</div>
-                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto">Avaliação de clientes</div>
+                <div class="text-3xl md:text-4xl font-bold mb-2 text-[#f9f9f9] font-title"><span class="counter" data-target="5">0</span>/5</div>
+                <div class="text-[10px] md:text-xs text-zinc-500 uppercase tracking-widest font-bold leading-tight max-w-[140px] mx-auto mt-2">Avaliação de clientes</div>
             </div>
         </div>
     </section>
@@ -175,7 +179,7 @@
                 </div>
             </div>
             <div class="reveal-on-scroll delay-200">
-                <h2 class="text-4xl md:text-6xl font-bold mb-10 text-[#f9f9f9] font-title">O estrategista por trás da sua retenção</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-10 text-[#f9f9f9] font-title">O estrategista por trás da sua retenção</h2>
                 <p class="text-zinc-400 mb-8 text-xl leading-relaxed font-medium">
                     Hoje, um vídeo bonito já não é suficiente. Em um ambiente onde a atenção é disputada a cada segundo, conteúdo precisa de direção, intenção e estrutura.
                 </p>
@@ -196,7 +200,7 @@
     <section id="metodo" class="py-32 px-6 bg-zinc-900/20">
         <div class="max-w-7xl mx-auto">
             <div class="mb-20 text-center max-w-3xl mx-auto reveal-on-scroll">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-[#f9f9f9] font-title">Como construo retenção</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-[#f9f9f9] font-title">Como construo retenção</h2>
                 <p class="text-zinc-400 text-xl font-medium">O processo estratégico por trás de cada vídeo. Uma engenharia intencional desenhada para capturar e manter a atenção do seu público.</p>
             </div>
             <div class="grid md:grid-cols-5 gap-6">
@@ -248,7 +252,7 @@
     <section id="portfolio" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-10 reveal-on-scroll">
             <div>
-                <h2 class="text-4xl md:text-6xl font-bold mb-4 text-[#f9f9f9] font-title">Projetos que ganharam vida</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-4 text-[#f9f9f9] font-title">Projetos que ganharam vida</h2>
                 <p class="text-zinc-400 text-xl font-medium">Projetos que saíram do papel e ganharam vida.</p>
             </div>
             <a href="https://instagram.com/lucas.sraiva" target="_blank" class="px-8 py-4 rounded-full border border-zinc-800 text-sm font-bold text-zinc-400 flex items-center gap-3 hover:text-white hover:border-zinc-600 transition-all">
@@ -277,7 +281,7 @@
                 </div>
             </div>
             
-            <!-- Card 2 (Marca) -->
+            <!-- Card 2 (Joalheria) -->
             <div onclick="openVideo('Videos/ETERNIZ.mp4')" class="group relative aspect-[9/16] rounded-[32px] bg-zinc-900 overflow-hidden border border-zinc-800 hover:border-[#ea5b0c]/50 hover:scale-[1.03] transition-all duration-500 cursor-pointer shadow-2xl reveal-on-scroll delay-200">
                 
                 <!-- Vídeo de Fundo (Mudo e em Loop) -->
@@ -289,11 +293,11 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-[#09090b] via-[#09090b]/90 to-transparent z-20">
-                    <div class="text-[10px] font-black uppercase tracking-widest text-[#ea5b0c] mb-2">Marca</div>
-                    <h4 class="font-bold text-xl mb-3 leading-tight text-[#f9f9f9]">Estratégia de conteúdo orgânico que gerou +20% de faturamento</h4>
+                    <div class="text-[10px] font-black uppercase tracking-widest text-[#ea5b0c] mb-2">Joalheria</div>
+                    <h4 class="font-bold text-xl mb-3 leading-tight text-[#f9f9f9]">Estratégia de percepção de valor</h4>
                     <div class="flex items-center gap-2 text-xs font-bold text-zinc-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ea5b0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 
-                        12k+ views
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ea5b0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg> 
+                        +20% em faturamento
                     </div>
                 </div>
             </div>
@@ -311,7 +315,7 @@
                 </div>
                 <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-[#09090b] via-[#09090b]/90 to-transparent z-20">
                     <div class="text-[10px] font-black uppercase tracking-widest text-[#ea5b0c] mb-2">Fitness</div>
-                    <h4 class="font-bold text-xl mb-3 leading-tight text-[#f9f9f9]">Conteúdo para educar e testar alcance</h4>
+                    <h4 class="font-bold text-xl mb-3 leading-tight text-[#f9f9f9]">Produção de conteúdo educativo</h4>
                     <div class="flex items-center gap-2 text-xs font-bold text-zinc-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ea5b0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 
                         6k+ views
@@ -319,7 +323,7 @@
                 </div>
             </div>
 
-            <!-- Card 4 (Educativo) -->
+            <!-- Card 4 (Finanças) -->
             <div onclick="openVideo('Videos/IAGO.mp4')" class="group relative aspect-[9/16] rounded-[32px] bg-zinc-900 overflow-hidden border border-zinc-800 hover:border-[#ea5b0c]/50 hover:scale-[1.03] transition-all duration-500 cursor-pointer shadow-2xl reveal-on-scroll delay-[400ms]">
                 
                 <!-- Vídeo de Fundo (Mudo e em Loop) -->
@@ -331,7 +335,7 @@
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-[#09090b] via-[#09090b]/90 to-transparent z-20">
-                    <div class="text-[10px] font-black uppercase tracking-widest text-[#ea5b0c] mb-2">Conteúdo educativo</div>
+                    <div class="text-[10px] font-black uppercase tracking-widest text-[#ea5b0c] mb-2">Finanças</div>
                     <h4 class="font-bold text-xl mb-3 leading-tight text-[#f9f9f9]">Roteiro, gravação e edição completos</h4>
                 </div>
             </div>
@@ -342,7 +346,7 @@
     <section id="entregaveis" class="py-32 px-6 bg-zinc-900/20">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20 reveal-on-scroll">
-                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-[#f9f9f9] font-title">O que você recebe</h2>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 text-[#f9f9f9] font-title">O que você recebe</h2>
                 <p class="text-zinc-400 text-xl max-w-2xl mx-auto font-medium">Seu conteúdo estruturado para prender atenção e comunicar com clareza.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-12">
@@ -423,7 +427,7 @@
                             <!-- FOTO DOS CLIENTES NO DEPOIMENTO -->
                             <img id="testimonial-img" src="" alt="Avatar" class="w-16 h-16 bg-zinc-800 rounded-full border-2 border-[#ea5b0c]/20 object-cover" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'%233f3f46\'><path d=\'M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z\'/></svg>';">
                             <div>
-                                <div id="testimonial-name" class="font-bold text-xl text-[#f9f9f9]">Nome</div>
+                                <div id="testimonial-name" class="font-bold text-xl text-[#f9f9f9] font-title">Nome</div>
                                 <div id="testimonial-role" class="text-sm text-zinc-500 font-bold">Role</div>
                             </div>
                         </div>
@@ -443,7 +447,7 @@
     <!-- Contact Form -->
     <section id="orcamento" class="py-32 px-6 max-w-5xl mx-auto">
         <div class="text-center mb-20 reveal-on-scroll">
-            <h2 class="text-4xl md:text-6xl font-bold mb-6 text-[#f9f9f9] font-title">Vamos estruturar seu conteúdo?</h2>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 text-[#f9f9f9] font-title">Vamos estruturar seu conteúdo?</h2>
             <p class="text-zinc-400 text-xl font-medium">Conte um pouco sobre o projeto e eu retorno com a melhor forma de executá-lo.</p>
         </div>
         
@@ -500,7 +504,7 @@
     <footer class="py-24 border-t border-zinc-800/50 px-6">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12 reveal-on-scroll">
             <div class="text-center md:text-left">
-                <div class="text-3xl font-black tracking-tighter mb-4 text-[#f9f9f9] font-title">LUCAS SARAIVA</div>
+                <div class="text-2xl font-black tracking-tighter mb-4 text-[#f9f9f9] font-title">LUCAS SARAIVA</div>
                 <p class="text-zinc-500 text-sm font-semibold">© 2024 Lucas Saraiva - Estratégia e vídeos. <br>Todos os direitos reservados.</p>
             </div>
             <div class="flex gap-10">
